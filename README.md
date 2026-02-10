@@ -2,6 +2,8 @@
 
 **DataMate** is a modern, client-side web application for analyzing, filtering, and visualizing CSV and Excel data instantly in your browser.
 
+> 📘 **Documentation**: [View Project Requirements (PRD)](./PRD1.md)
+
 ![DataMate Preview](https://via.placeholder.com/800x400?text=DataMate+Preview) 
 *(Replace with actual screenshot)*
 
@@ -34,6 +36,8 @@ Since DataMate is a client-side application, you just need a modern web browser 
 That's it! No `npm install` or backend server required.
 
 ## Usage
+
+> 📖 **User Guide**: For detailed instructions, open [help.html](./help.html) in your browser.
 
 1.  **Upload**: Drag and drop a file into the upload zone or click "Example Data" to try it out.
 2.  **Filter**: Select a column, type a value, and click "Add Filter" to narrow down your data.

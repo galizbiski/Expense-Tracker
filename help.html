@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataMate - Help & Documentation</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .help-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: var(--text-main);
+            overflow-y: auto;
+            height: calc(100vh - var(--header-height));
+        }
+
+        .help-section {
+            margin-bottom: 3rem;
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+        }
+
+        .help-section h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .help-section h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #c4b5fd;
+        }
+
+        .help-section p,
+        .help-section li {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+
+        .help-section ul,
+        .help-section ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .key-feature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .key-feature i {
+            color: var(--success);
+            font-size: 1.2rem;
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #e2e8f0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="logo">
+            <i class="fa-solid fa-book" style="color: var(--primary);"></i>
+            Data<span>Mate Docs</span>
+        </div>
+        <div class="header-actions">
+            <a href="index.html" class="btn btn-primary btn-sm" style="text-decoration: none;">
+                <i class="fa-solid fa-arrow-left"></i> Back to App
+            </a>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <div class="help-container">
+
+        <div class="help-section">
+            <h2>Introduction</h2>
+            <p>Welcome to <strong>DataMate</strong>, your private, browser-based data analysis tool. DataMate allows you
+                to quickly inspect, filter, and analyze CSV and Excel files without uploading your sensitive data to any
+                server.</p>
+            <h3>Key Benefits</h3>
+            <div class="key-feature">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                    <strong>100% Private:</strong> Files are processed locally in your browser. No data leaves your
+                    computer.
+                </div>
+            </div>
+            <div class="key-feature">
+                <i class="fa-solid fa-bolt"></i>
+                <div>
+                    <strong>Instant Analysis:</strong> Load files and get results immediately without complex setups.
+                </div>
+            </div>
+            <div class="key-feature">
+                <i class="fa-solid fa-file-csv"></i>
+                <div>
+                    <strong>Versatile Support:</strong> Supports both standard CSV files and modern Excel (.xlsx)
+                    spreadsheets.
+                </div>
+            </div>
+        </div>
+
+        <div class="help-section">
+            <h2>Getting Started</h2>
+
+            <h3>1. Uploading Data</h3>
+            <p>To begin, simply drag and drop your file into the "Upload" box on the left panel, or click it to browse
+                your computer.</p>
+            <p>Don't have a file handy? Click the <strong>Example Data</strong> button in the top right to load a sample
+                dataset.</p>
+
+            <h3>2. Viewing Data</h3>
+            <p>Once loaded, your data appears in the main grid on the right. The table supports:</p>
+            <ul>
+                <li><strong>Sticky Headers:</strong> Keep column names visible while scrolling.</li>
+                <li><strong>Virtual Scrolling:</strong> Handles large lists smoothly (display limited to top 100 rows
+                    for performance by default).</li>
+            </ul>
+        </div>
+
+        <div class="help-section">
+            <h2>Analysis Tools</h2>
+
+            <h3>Filtering</h3>
+            <ol>
+                <li>Select a column from the dropdown in the <strong>Filter</strong> section.</li>
+                <li>Type the text or number you're looking for.</li>
+                <li>Click <strong>Add Filter</strong>.</li>
+            </ol>
+            <p>You can add multiple filters to narrow down your results. Active filters appear as chips above the list.
+            </p>
+
+            <h3>Sorting</h3>
+            <p>Organize your data by selecting a column in the <strong>Sort</strong> section and clicking the sort
+                button. Click again to toggle between Ascending and Descending order.</p>
+
+            <h3>metrics</h3>
+            <p>Get quick statistics on your numeric columns:</p>
+            <ul>
+                <li><strong>Sum:</strong> Total of all values.</li>
+                <li><strong>Average:</strong> The mean value.</li>
+                <li><strong>Min/Max:</strong> The smallest and largest values.</li>
+                <li><strong>Count:</strong> The number of non-empty rows.</li>
+            </ul>
+            <p>Select the column and operation, then click <strong>Compute</strong> to see the result.</p>
+        </div>
+
+        <div class="help-section">
+            <h2>Exporting</h2>
+            <p>Found what you need? Click the <strong>Export</strong> button in the top header to download your
+                currently filtered view as a new CSV file.</p>
+        </div>
+
+        <div class="help-section">
+            <h2>Troubleshooting</h2>
+            <h3>My file won't load?</h3>
+            <p>Ensure your file is a valid <code>.csv</code> or <code>.xlsx</code> file. Very large files (>50MB) might
+                be slow depending on your browser's memory limits.</p>
+
+            <h3>Dates are not sorting correctly?</h3>
+            <p>Currently, sorting works best on standard text and numbers. Complex date formats might sort
+                alphabetically.</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
